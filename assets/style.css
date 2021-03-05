@@ -2,3 +2,24 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+:root {
+    --color-dark: navy;
+    --color-medium: blue;
+    --color-light: lightblue;
+    --color-white: whitesmoke;
+}
+
+body {
+    --color-medium;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+    color: navy;
+    font-size: 1.3em;
+}
