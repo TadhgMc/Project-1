@@ -23,3 +23,10 @@ body {
     color: navy;
     font-size: 1.3em;
 }
+
+.weatherContainer {
+    display: grid;
+    width: 100vw;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
