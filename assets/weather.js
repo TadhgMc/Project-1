@@ -19,6 +19,7 @@ function getWeather() {
         feelsLike.text(Math.floor(data.list[0].main.feels_like));
         $('#icon').attr('src', `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`);
         $('#windSpeed').text(Math.floor(data.list[0].wind.speed));
+        //if to check for rain or snow, if null say none, if something->say what
         console.log(data);
         console.log(data.list[0].main.temp);
         console.log(data.list[0].weather[0].icon);
