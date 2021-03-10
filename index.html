@@ -12,60 +12,36 @@
     <title>Trippin' Around Columbus</title>
 </head>
 <body>
-    <div class="weatherContainer" id="weatherContainer">
-        <h1>Today's Weather in Columbus</h1>
-        <div class="weatherInfo" id="weatherInfo">
-            <ol>
-                <li>Temp: <span id="temp"></span>&#8457</li>
-                <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
-                <img id="icon">
-                <li>Current Weather Conditions: <span id="wConditions"></span></li>
-                <li>Wind Speed: <span id="windSpeed"></span>mph</li>
-            </ol>
+    
+    <div class="container" id="container">
+        
+        <div class="weatherContainer" id="weatherContainer">
+            <h1>Today's Weather in Columbus</h1>
+            <div class="weatherInfo" id="weatherInfo">
+                <ol>
+                    <li>Temp: <span id="temp"></span>&#8457</li>
+                    <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
+                    <img id="icon">
+                    <li>Current Weather Conditions: <span id="wConditions"></span></li>
+                    <li>Wind Speed: <span id="windSpeed"></span>mph</li>
+                </ol>
+            </div>
         </div>
+
+        <div class="localActivitiesContainer" id="localActivitiesContainer">
+            <h2>Local Events Happening in Columbus</h2>
+            <div class="localActivities" id="localActivities">
+                <ol>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+
     </div>
 
-    <br>
-
-    <div class="publicAttractionsContainer" id="publicAttractionsContainer">
-        <h2>Public Attractions in Columbus</h2><br>
-        <div class="publicAttractions" id="publicAttractions">
-            <ol>
-                <li></li>
-            </ol>
-        </div>
-    </div>
-
-
-    <div class="localFoodContainer" id="localFoodContainer">
-        <h2>Local Food in Columbus</h2>
-        <div class="localFood" id="localFood">
-            <ol>
-                <li></li>
-            </ol>
-        </div>
-    </div>
-
-    <div class="localActivitiesContainer" id="localActivitiesContainer">
-        <h2>Today's Weather in Columbus</h2>
-        <div class="localActivities" id="localActivities">
-            <ol>
-                <li></li>
-            </ol>
-        </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/weather.js"></script>
+    <script src="assets/localevents.js"></script>
 </body>
 </html>
-
-
-<!--
-    <div class="start-screen-container" id="start-screen-container">
-        <div class="code-quiz" id="code-quiz">Code Quiz!</div>
-        <div class="controls">
-            <button class="start-btn btn" id="start-btn">Start</button>
-        </div>
-    </div>
--->
