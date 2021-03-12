@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- changed to this bootstrap css to get attraction pg btns -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="assets/style.css" rel="stylesheet">
     
     <title>Trippin' Around Columbus</title>
@@ -17,86 +18,25 @@
     
     <div class="container" id="container">
         
-        <div class="weatherContainer" id="weatherContainer">
-            <h1>Today's Weather in Columbus</h1>
-            <div class="weatherInfo" id="weatherInfo">
-                <ol>
-                    <li>Temp: <span id="temp"></span>&#8457</li>
-                    <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
-                    <img id="icon" alt="Weather Icon">
-                    <li>Current Weather Conditions: <span id="wConditions"></span></li>
-                    <li>Wind Speed: <span id="windSpeed"></span>mph</li>
-                </ol>
-            </div>
-            <div id="carouselExampleIndicators" class="carousel slide w-25 h-25" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active day1">
-                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
-                    <div class="card carousel-caption" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title dateSpot">Date Here</h5>
-                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
-                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item day2">
-                    <div class="card" style="width: 18rem;">
-                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
-                      <div class="card-body">
-                        <h5 class="card-title dateSpot">Date Here</h5>
-                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
-                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item day3">
-                    <div class="card" style="width: 18rem;">
-                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
-                      <div class="card-body">
-                        <h5 class="card-title dateSpot">Date Here</h5>
-                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
-                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item day4">
-                    <div class="card" style="width: 18rem;">
-                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
-                      <div class="card-body">
-                        <h5 class="card-title dateSpot">Date Here</h5>
-                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
-                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item day5">
-                    <div class="card" style="width: 18rem;">
-                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
-                      <div class="card-body">
-                        <h5 class="card-title dateSpot">Date Here</h5>
-                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
-                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
-                      </div>
-                    </div>
-                  </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
+      <div class="weatherContainer" id="weatherContainer">
+          <h1>Today's Weather in Columbus</h1>
+          <div class="weatherInfo" id="weatherInfo">
+            <ol>
+              <li>Temp: <span id="temp"></span>&#8457</li>
+              <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
+              <img id="icon" alt="Weather Icon">
+              <li>Current Weather Conditions: <span id="wConditions"></span></li>
+              <li>Wind Speed: <span id="windSpeed"></span>mph</li>
+            </ol>
+          </div>
+          <div class="forecastContainer">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      </div>
 
         <div class="localEventsContainer" id="localEventsContainer">
           <div class="row">
