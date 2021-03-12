@@ -6,4 +6,4 @@ With the use of server-side APIs OpenWeather and Ticketmaster, Git branching wor
 
 Here is the link to access the site: [Trippin' Around Columbus](https://tadhgmc.github.io/Project-1/)
 
-![demo pic](assets\images\demo-pic.jpg)
+![demo pic](assets/images/demo-pic.jpg)
