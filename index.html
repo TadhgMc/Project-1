@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- changed to this bootstrap css to get attraction pg btns -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="assets/style.css" rel="stylesheet">
     
     <title>Trippin' Around Columbus</title>
@@ -30,11 +30,16 @@
             </ol>
           </div>
           <div class="forecastContainer">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="dropdown">
+              <label>How Many Days Would You Like a Forecast For?</label>
+              <select class="numOfFore" name="number of days">
+                <option value="1">1 Day</option>
+                <option value="2">2 Day</option>
+                <option value="3">3 Day</option>
+                <option value="4">4 Day</option>
+                <option value="5">5 Day</option>
+              </select>
+            </div>
           </div>
       </div>
 
