@@ -23,11 +23,79 @@
                 <ol>
                     <li>Temp: <span id="temp"></span>&#8457</li>
                     <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
-                    <img id="icon">
+                    <img id="icon" alt="Weather Icon">
                     <li>Current Weather Conditions: <span id="wConditions"></span></li>
                     <li>Wind Speed: <span id="windSpeed"></span>mph</li>
                 </ol>
             </div>
+            <div id="carouselExampleIndicators" class="carousel slide w-25 h-25" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active day1">
+                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
+                    <div class="card carousel-caption" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title dateSpot">Date Here</h5>
+                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
+                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item day2">
+                    <div class="card" style="width: 18rem;">
+                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
+                      <div class="card-body">
+                        <h5 class="card-title dateSpot">Date Here</h5>
+                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
+                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item day3">
+                    <div class="card" style="width: 18rem;">
+                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
+                      <div class="card-body">
+                        <h5 class="card-title dateSpot">Date Here</h5>
+                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
+                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item day4">
+                    <div class="card" style="width: 18rem;">
+                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
+                      <div class="card-body">
+                        <h5 class="card-title dateSpot">Date Here</h5>
+                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
+                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item day5">
+                    <div class="card" style="width: 18rem;">
+                      <img src="" class="card-img-top foreCastIcon" alt="Forecast Icon">
+                      <div class="card-body">
+                        <h5 class="card-title dateSpot">Date Here</h5>
+                        <p class="card-text">Temp: <span class="foTemp"></span>&#8457</p>
+                        <p class="card-text">Predicted Weather Conditions: <span class="foreCondition"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
 
         <div class="localEventsContainer" id="localEventsContainer">
@@ -90,6 +158,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/weather.js"></script>
-    <script src="assets/localevents.js"></script>
+    <!-- <script src="assets/localevents.js"></script> -->
 </body>
 </html>
