@@ -33,7 +33,16 @@ h1 {
     font-size: 1.5em;
 }
 
+ul {
+    list-style-type: none;
+    margin: none;
+    padding: none;
+}
 
+label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 
 .weatherContainer { grid-area: weatherContainer; }
 .localActivitiesContainer { grid-area: localActivitiesContainer; }
@@ -66,15 +75,8 @@ h1 {
     padding: 0 10px 10px 10px;
     padding-left: 15px;
     border-radius: 10px;
-}
-
-.weatherContainer {
-    font-size: 1.2em;
-}
-
-.localActivitiesContainer,
-.stateActivitiesContainer {
-    font-size: 0.8em;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 #attraction-panel {
@@ -86,17 +88,14 @@ h2 {
     text-decoration: underline;
 }
 
-.weatherTitle {
-    font-size: 1.1em;
-}
-
-.localEvents, .stateEvents {
-    font-size: 1.8em;
+.weatherTitle, .localEvents, .stateEvents {
+    font-size: 1.3em;
+    margin-top: 10px;
 }
 
 .pickOhio, .pickColumbus {
     font-size: 1em;
-    margin: 5px 0;
+    margin: 20px 0;
 }
 
 @media screen and (min-width: 480px)  {
@@ -141,9 +140,6 @@ h2 {
         margin-top: 0;
     }
 
-    .weatherContainer {
-        line-height: 3.5em;
-    }
 
 }
 

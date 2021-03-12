@@ -50,7 +50,7 @@ $('#foreBtn').on('click', function(event){
             let foreConditions = $("<p class='foreCond'>Forecasted Conditions: </p>").append(data.list[foreListItem].weather[0].description);
 
             //add weather info elements to its respective forecast day div
-            $('.forecastCards').append(`<div class='foreDay${i}'></div>`).append(foreIcon,foreDate,foreTemp,foreConditions);
+            $('.forecastCards').append(`<div class='foreDay${i}'></div>`).append(foreIcon,foreDate,foreTemp,foreConditions,"<hr>");
 
             // adding to number to have it choose the next days forecasted weather data upon next loop
             foreListItem = foreListItem + 7;
