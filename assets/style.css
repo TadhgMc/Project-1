@@ -24,6 +24,16 @@ body {
     font-size: 1.3em;
 }
 
+header {
+    display: flex;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
 .weatherContainer {
     display: grid;
     grid: 100px / auto;
@@ -32,26 +42,14 @@ body {
     color: var(--color-light);
 }
 
-.publicAttractionsContainer {
+.localEventsContainer {
     display: grid;
     grid: 100px / auto;
     width: 100vw;
     background-color: var(--color-dark);
-    color: var(--color-light);
+    color: var(--color-medium);
 }
 
-.localFoodContainer {
-    display: grid;
-    grid: 100px / auto;
-    width: 100vw;
-    background-color: var(--color-dark);
-    color: var(--color-light);
-}
-
-.localActivitiesContainer {
-    display: grid;
-    grid: 100px / auto;
-    width: 100vw;
-    background-color: var(--color-dark);
-    color: var(--color-light);
-}
+#attraction-panel {
+    display: none;
+} 
