@@ -33,10 +33,7 @@ h1 {
     font-size: 1.5em;
 }
 
-h2 {
-    font-size: 1em;
-    text-decoration: underline;
-}
+
 
 .weatherContainer { grid-area: weatherContainer; }
 .localActivitiesContainer { grid-area: localActivitiesContainer; }
@@ -46,7 +43,7 @@ h2 {
     display: grid;
     background-color: var(--color-white);
     width: vw;
-    padding: 10px;
+    padding: 0 5px 5px 5px;
     border-radius: 10px;
     border-style: 5px solid navy;
     grid-template-areas:
@@ -64,20 +61,41 @@ h2 {
     display: grid;
     background-color: var(--color-light);
     color: var(--color-dark);
-    font-size: 1.2em;
     width: vw;
     margin: 10px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     padding-left: 15px;
     border-radius: 10px;
 }
 
+.weatherContainer {
+    font-size: 1.2em;
+}
+
+.localActivitiesContainer,
+.stateActivitiesContainer {
+    font-size: 0.8em;
+}
+
 #attraction-panel {
     display: none;
-} 
+}
+
+h2 {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.weatherTitle {
+    font-size: 1.1em;
+}
+
+.localEvents, .stateEvents {
+    font-size: 1.8em;
+}
 
 .pickOhio, .pickColumbus {
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 5px 0;
 }
 
@@ -118,9 +136,15 @@ h2 {
         "weatherContainer weatherContainer localActivitiesContainer localActivitiesContainer stateActivitiesContainer stateActivitiesContainer"
     }
 
-    h2, h3 {
+    h2 {
         font-size: 1.2em;
+        margin-top: 0;
     }
+
+    .weatherContainer {
+        line-height: 3.5em;
+    }
+
 }
 
 .hide {
