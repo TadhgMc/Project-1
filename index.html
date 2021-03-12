@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- changed to this bootstrap css to get attraction pg btns -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="assets/style.css" rel="stylesheet">
     
@@ -23,18 +23,19 @@
             <h2 class="weatherTitle" id="weatherTitle">Today's Weather in Columbus</h2>
           
             <div class="weatherInfo" id="weatherInfo">
-                <ol class="weatherInfoList">
+                <ul class="weatherInfoList">
                     <img id="icon" alt="Weather Icon">
                     <li>Temp: <span id="temp"></span>&#8457</li>
                     <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
                     <li>Current Weather Conditions: <span id="wConditions"></span></li>
                     <li>Wind Speed: <span id="windSpeed"></span>mph</li>
-                </ol>
+                </ul>
             </div>
+            <hr>
             <div class="forecastContainer">
                 <form class="dropdown">
                     <div>
-                        <label for="numOfFore">How Many Days Would You Like a Forecast For?</label>
+                        <label for="numOfFore">Forecast: Days</label>
                         <select id="numOfFore" name="number of days">
                             <option value="1">1 Day</option>
                             <option value="2">2 Days</option>
@@ -92,6 +93,7 @@
                         
                     </div> 
                 </div>
+
                 <div class="switchToOhio" id="switchToOhio">
                     <button class="pickOhio" id="pickOhio" type="button">Events in Ohio</button>
                 </div>
