@@ -49,7 +49,8 @@ $('#foreBtn').on('click', function(event){
             let foreTemp = $("<p class='foreTemp'>&#8457<p>").prepend(Math.floor(data.list[foreListItem].main.feels_like));
             let foreConditions = $("<p class='foreCond'>Forecasted Conditions: <p>").append(data.list[foreListItem].weather[0].description);
 
-            $('.forecastCards').after(`<div class='day${i}'></div>`)
+            $('.forecastCards').append(`<div class='foreDay${i}'></div>`);
+            $(`.foreDay${i}`).append(foreIcon,foreDate,foreTemp,foreConditions);
             foreListItem = foreListItem + 7; //this needs to be at the end
         }
         
