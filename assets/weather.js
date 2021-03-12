@@ -25,7 +25,10 @@ getWeather();
 
 
 //need to make a button that activates this.. can probably put this function into that addeventlistener
-function getForecast (){
+$('#foreBtn').on('click', function(event){
+    event.preventDefault();
+    console.log($('#numOfFore').val());
+
     fetch("https://api.openweathermap.org/data/2.5/forecast?q=columbus&units=imperial&appid=096317ae116f5805e156e4177ebd6d5a")
     .then(function (response) {
         console.log(response)
@@ -34,12 +37,14 @@ function getForecast (){
     .then( function (data) {
         //taking data from weather api and putting it onto the page
         console.log(data);
-        let foreDays = $('.numOfFore');
-        for(i=7; i < (foreDays * 7)/* days choice times 7 */; i+7) {
-            console.log(foreDays);
 
+        const foreDays = $('#numOfFore').val();
+        console.log(foreDays);
+        for (i=0; i < foreDays ; i++) {
+            console.log("test");
+            
         }
         
     });
-}
-getForecast();
+    
+})

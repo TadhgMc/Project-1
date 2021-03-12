@@ -18,30 +18,35 @@
     
     <div class="container" id="container">
         
-      <div class="weatherContainer" id="weatherContainer">
-          <h1>Today's Weather in Columbus</h1>
-          <div class="weatherInfo" id="weatherInfo">
-            <ol>
-              <li>Temp: <span id="temp"></span>&#8457</li>
-              <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
-              <img id="icon" alt="Weather Icon">
-              <li>Current Weather Conditions: <span id="wConditions"></span></li>
-              <li>Wind Speed: <span id="windSpeed"></span>mph</li>
-            </ol>
-          </div>
-          <div class="forecastContainer">
-            <div class="dropdown">
-              <label>How Many Days Would You Like a Forecast For?</label>
-              <select class="numOfFore" name="number of days">
-                <option value="1">1 Day</option>
-                <option value="2">2 Day</option>
-                <option value="3">3 Day</option>
-                <option value="4">4 Day</option>
-                <option value="5">5 Day</option>
-              </select>
+        <div class="weatherContainer" id="weatherContainer">
+            <h1>Today's Weather in Columbus</h1>
+            <div class="weatherInfo" id="weatherInfo">
+                <ol>
+                    <li>Temp: <span id="temp"></span>&#8457</li>
+                    <li>Feels Like: <span id="feelsLike"></span>&#8457</li>
+                    <img id="icon" alt="Weather Icon">
+                    <li>Current Weather Conditions: <span id="wConditions"></span></li>
+                    <li>Wind Speed: <span id="windSpeed"></span>mph</li>
+                </ol>
             </div>
-          </div>
-      </div>
+            <div class="forecastContainer">
+                <form class="dropdown">
+                    <div>
+                        <label for="numOfFore">How Many Days Would You Like a Forecast For?</label>
+                        <select id="numOfFore" name="number of days">
+                            <option value="1">1 Day</option>
+                            <option value="2">2 Day</option>
+                            <option value="3">3 Day</option>
+                            <option value="4">4 Day</option>
+                            <option value="5">5 Day</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="foreBtn">Check Forecast</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div class="localActivitiesContainer" id="localActivitiesContainer">
             <h2>Events in Columbus</h2>
