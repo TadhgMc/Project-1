@@ -22,3 +22,21 @@ function getWeather() {
 }
 
 getWeather();
+
+function getForecast (){
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=columbus&units=imperial&appid=096317ae116f5805e156e4177ebd6d5a")
+    .then(function (response) {
+        console.log(response)
+        return response.json();
+    })
+    .then( function (data) {
+        //taking data from weather api and putting it onto the page
+        console.log(data);
+        $('.foreCastIcon').attr('src', `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`);
+        $('.dateSpot').text(data.list[0].weather[0].description);
+        $('.foTemp').text(data.list[0].main.temp);
+        $('.foreCondition').text(data.list[0].main.humidity);
+        
+    });
+}
+getForecast();
