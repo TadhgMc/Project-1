@@ -11,17 +11,9 @@
 }
 
 body {
-    color: var(--color-medium);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
-    color: navy;
-    font-size: 1.3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--color-light);
+    font-size: 18px;
 }
 
 header {
@@ -34,22 +26,103 @@ header {
     margin-top: 10px;
 }
 
-.weatherContainer {
-    display: grid;
-    grid: 100px / auto;
-    width: 100vw;
-    background-color: var(--color-dark);
-    color: var(--color-light);
+h1 {
+    justify-content: center;
+    margin: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
-.localEventsContainer {
+h2 {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.weatherContainer { grid-area: weatherContainer; }
+.localActivitiesContainer { grid-area: localActivitiesContainer; }
+.stateActivitiesContainer { grid-area: stateActivitiesContainer; }
+
+.container {
     display: grid;
-    grid: 100px / auto;
-    width: 100vw;
-    background-color: var(--color-dark);
-    color: var(--color-medium);
+    background-color: var(--color-white);
+    width: vw;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: 5px solid navy;
+    grid-template-areas:
+        "weatherContainer" 
+        "weatherContainer" 
+        "localActivitiesContainer" 
+        "localActivitiesContainer"
+        "stateActivitiesContainer"
+        "stateActivitiesContainer"
+}
+
+.weatherContainer, 
+.localActivitiesContainer, 
+.stateActivitiesContainer {
+    display: grid;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-size: 1.2em;
+    width: vw;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 10px;
 }
 
 #attraction-panel {
     display: none;
 } 
+
+.pickOhio, .pickColumbus {
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+@media screen and (min-width: 480px)  {
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.6em;
+    }
+
+    .container {
+        grid-template-areas:
+            "weatherContainer weatherContainer weatherContainer weatherContainer" 
+            "localActivitiesContainer localActivitiesContainer stateActivitiesContainer stateActivitiesContainer"
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .container {
+        font-size: 1.4em;
+        grid-template-areas:
+        "weatherContainer weatherContainer localActivitiesContainer localActivitiesContainer stateActivitiesContainer stateActivitiesContainer"
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+}
+
+.hide {
+    display: none;
+}

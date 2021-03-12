@@ -18,7 +18,7 @@
     <div class="container" id="container">
         
         <div class="weatherContainer" id="weatherContainer">
-            <h1>Today's Weather in Columbus</h1>
+            <h2>Today's Weather in Columbus</h2>
             <div class="weatherInfo" id="weatherInfo">
                 <ol>
                     <li>Temp: <span id="temp"></span>&#8457</li>
@@ -30,59 +30,56 @@
             </div>
         </div>
 
-        <div class="localEventsContainer" id="localEventsContainer">
-          <div class="row">
-              <div class="col-xs-6">
-              <div id='events-panel' class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Events Happening in Columbus</h3>
+        <div class="localActivitiesContainer" id="localActivitiesContainer">
+            <h2>Events in Columbus</h2>
+            <div class="localActivities" id="localActivities">
+                <div class="columbusActivities" id="columbusActivities">
+                    <div class="columbusEvent1" id="columbusEvent1">
+                        <span class="columbusEvent1Name" id="columbusEvent1Name"></span>
+                        <span class="columbusEvent1Date" id="columbusEvent1Date"></span>
+                        <span class="columbusEvent1Time" id="columbusEvent1Time"></span>
+                        <br>
+                        <span class="columbusEvent2Name" id="columbusEvent2Name"></span>
+                        <span class="columbusEvent2Date" id="columbusEvent2Date"></span>
+                        <span class="columbusEvent2Time" id="columbusEvent2Time"></span>
+                        <br>
+                        <span class="columbusEvent3Name" id="columbusEvent3Name"></span>
+                        <span class="columbusEvent3Date" id="columbusEvent3Date"></span>
+                        <span class="columbusEvent3Time" id="columbusEvent3Time"></span>                         
+                    </div> 
+                    <div class="columbusEvent2" id="columbusEvent2">
+                        
+                    </div> 
                 </div>
-                <div class="panel-body">
-                  <div id="events" class="list-group">
-                    <a href="#" class="list-group-item">
-                      <h4 class="list-group-item-heading">Event title</h4>
-                      <p class="list-group-item-text">event info</p>
-                      <p class="venue"></p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <h4 class="list-group-item-heading">Event title</h4>
-                      <p class="list-group-item-text">event info</p>
-                      <p class="venue"></p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <h4 class="list-group-item-heading">Event title</h4>
-                      <p class="list-group-item-text">event info</p>
-                      <p class="venue"></p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                      <h4 class="list-group-item-heading">Event title</h4>
-                      <p class="list-group-item-text">event info</p>
-                      <p class="venue"></p>
-                    </a>
-                  </div>
+                <div class="switchToOhio" id="switchToOhio">
+                    <button class="pickOhio" id="pickOhio" type="button">Events in Ohio</button>
                 </div>
-                <div class="panel-footer">
-                  <nav>
-                    <ul class="pager">
-                      <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
-                      <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
-                    </ul>
-                  </nav>
+            </div>
+        </div>
+
+        <div class="stateActivitiesContainer hide" id="stateActivitiesContainer">
+            <h2>Events in Ohio</h2>
+            <div class="stateActivities" id="stateActivities">
+                <div class="ohioActivities" id="ohioActivities">
+                    <span class="ohioEvent1Name" id="ohioEvent1Name"></span>
+                    <span class="ohioEvent1Date" id="ohioEvent1Date"></span>
+                    <span class="ohioEvent1Time" id="ohioEvent1Time"></span>
+                    <br>
+                    <span class="ohioEvent2Name" id="ohioEvent2Name"></span>
+                    <span class="ohioEvent2Date" id="ohioEvent2Date"></span>
+                    <span class="ohioEvent2Time" id="ohioEvent2Time"></span>   
+                    <br>
+                    <span class="ohioEvent3Name" id="ohioEvent3Name"></span>
+                    <span class="ohioEvent3Date" id="ohioEvent3Date"></span>
+                    <span class="ohioEvent3Time" id="ohioEvent3Time"></span>   
                 </div>
-              </div>
-              
-              <div id='attraction-panel' class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Event</h3>
+                <div class="switchToColumbus" id="switchToColumbus">
+                    <button class="pickColumbus" id="pickColumbus" type="button">Events in Columbus</button>
                 </div>
-                <div id="attraction" class="panel-body">
-                  <h4 class="list-group-item-heading">Attraction title</h4>
-                  <img class="col-xs-12" src="">
-                  <p id="classification"></p>
+                <div class="ohioActivities" id="ohioActivities">
+
                 </div>
-              </div>
-              </div>
-          </div>
+            </div>
         </div>
 
     </div>

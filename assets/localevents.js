@@ -1,96 +1,116 @@
-var page = 0;
+// Constants for Events in Ohio and Events in Columbus buttons
+const pickOhioButton = document.querySelector("#pickOhio");
+const pickColumbusButton = document.querySelector("#pickColumbus");
+const localActivitiesContainer = document.querySelector("#localActivitiesContainer");
+const stateActivitiesContainer = document.querySelector("#stateActivitiesContainer");
 
-function getEvents(page) {
+// Click to hide Columbus and show Ohio
+pickOhioButton.addEventListener("click", () => {
+    localActivitiesContainer.classList.add("hide");
+    stateActivitiesContainer.classList.remove("hide");
+});
 
-    $('#events-panel').show();
-    $('#attraction-panel').hide();
-  
-    if (page < 0) {
-      page = 0;
-      return;
-    }
-    if (page > 0) {
-      if (page > getEvents.json.page.totalPages-1) {
-        page=0;
-      }
-    }
-    
-    $.ajax({
-      type:"GET",
-      url:"https://app.ticketmaster.com/discovery/v2/events.json?city=columbus&apikey=3uaJfxHrGuBFeFN7pSjJEALAzNssmWGc&size=4&page="+page,
-      async:true,
-      dataType: "json",
-      success: function(json) {
-            getEvents.json = json;
-                  showEvents(json);
-               },
-      error: function(xhr, status, err) {
-                  console.log(err);
-               }
+// Click to hide Ohio and show Columbus
+pickColumbusButton.addEventListener("click", () => {
+    stateActivitiesContainer.classList.add("hide");
+    localActivitiesContainer.classList.remove("hide");
+});
+
+
+// Variables for Columbus events
+var columbusEvent1Name = document.querySelector("#columbusEvent1Name");
+var columbusEvent1Date = document.querySelector("#columbusEvent1Date");
+var columbusEvent1Time = document.querySelector("#columbusEvent1Time");
+var columbusEvent2Name = document.querySelector("#columbusEvent2Name");
+var columbusEvent2Date = document.querySelector("#columbusEvent2Date");
+var columbusEvent2Time = document.querySelector("#columbusEvent2Time");
+var columbusEvent3Name = document.querySelector("#columbusEvent3Name");
+var columbusEvent3Date = document.querySelector("#columbusEvent3Date");
+var columbusEvent3Time = document.querySelector("#columbusEvent3Time");
+
+// Retrieve data for Columbus events
+fetch("https://app.ticketmaster.com/discovery/v2/events.json?city=Columbus&apikey=EAwhjPFguOMlx2wGq5Uw1hujpkkBbPYN")
+
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        // Event 1
+        var columbusEvent1NameValue = data["_embedded"]["events"]["0"]["name"];
+        columbusEvent1Name.innerHTML = columbusEvent1NameValue + ":  ";
+        var columbusEvent1DateValue = data["_embedded"]["events"]["0"]["dates"]["start"]["localDate"];
+        columbusEvent1Date.innerHTML = columbusEvent1DateValue + " at ";
+        var columbusEvent1TimeValue = data["_embedded"]["events"]["0"]["dates"]["start"]["localTime"];
+        columbusEvent1Time.innerHTML = columbusEvent1TimeValue;
+
+        // Event 2
+        var columbusEvent2NameValue = data["_embedded"]["events"]["1"]["name"];
+        columbusEvent2Name.innerHTML = columbusEvent2NameValue + ":  ";
+        var columbusEvent2DateValue = data["_embedded"]["events"]["1"]["dates"]["start"]["localDate"];
+        columbusEvent2Date.innerHTML = columbusEvent2DateValue + " at ";
+        var columbusEvent2TimeValue = data["_embedded"]["events"]["1"]["dates"]["start"]["localTime"];
+        columbusEvent2Time.innerHTML = columbusEvent2TimeValue;
+        
+        // Event 3
+        var columbusEvent3NameValue = data["_embedded"]["events"]["2"]["name"];
+        columbusEvent3Name.innerHTML = columbusEvent3NameValue + ":  ";
+        var columbusEvent3DateValue = data["_embedded"]["events"]["2"]["dates"]["start"]["localDate"];
+        columbusEvent3Date.innerHTML = columbusEvent3DateValue + " at ";
+        var columbusEvent3TimeValue = data["_embedded"]["events"]["2"]["dates"]["start"]["localTime"];
+        columbusEvent3Time.innerHTML = columbusEvent3TimeValue;
     });
-  }
 
-function showEvents(json) {
-    var items = $('#events .list-group-item');
-    items.hide();
-    var events = json._embedded.events;
-    var item = items.first();
-    for (var i=0;i<events.length;i++) {
-      item.children('.list-group-item-heading').text(events[i].name);
-      item.children('.list-group-item-text').text(events[i].dates.start.localDate);
-      try {
-        item.children('.venue').text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
-      } catch (err) {
-        console.log(err);
-      }
-      item.show();
-      item.off("click");
-      item.click(events[i], function(eventObject) {
-        console.log(eventObject.data);
-        try {
-          getAttraction(eventObject.data._embedded.attractions[0].id);
-        } catch (err) {
-        console.log(err);
-        }
-      });
-      item=item.next();
-    }
-  }
+    // Connect Columbus data to html ids
+    var columbusEvent1Name = document.querySelector("#columbusEvent1Name");
+    var columbusEvent1Date = document.querySelector("#columbusEvent1Date");
+    var columbusEvent1Time = document.querySelector("#columbusEvent1Time");
+    var columbusEvent2Name = document.querySelector("#columbusEvent2Name");
+    var columbusEvent2Date = document.querySelector("#columbusEvent2Date");
+    var columbusEvent2Time = document.querySelector("#columbusEvent2Time");
+    var columbusEvent3Name = document.querySelector("#columbusEvent3Name");
+    var columbusEvent3Date = document.querySelector("#columbusEvent3Date");
+    var columbusEvent3Time = document.querySelector("#columbusEvent3Time");
 
-  $('#prev').click(function() {
-    getEvents(--page);
-  });
-  
-  $('#next').click(function() {
-    getEvents(++page);
-  });
-  
-  function getAttraction(id) {
-    $.ajax({
-      type:"GET",
-      url:"https://app.ticketmaster.com/discovery/v2/attractions/"+id+".json?apikey=3uaJfxHrGuBFeFN7pSjJEALAzNssmWGc",
-      async:true,
-      dataType: "json",
-      success: function(json) {
-            showAttraction(json);
-               },
-      error: function(xhr, status, err) {
-                  console.log(err);
-               }
+
+// Variables for Ohio Events
+var ohioEvent1Name = document.querySelector("#ohioEvent1Name");
+var ohioEvent1Date = document.querySelector("#ohioEvent1Date");
+var ohioEvent1Time = document.querySelector("#ohioEvent1Time");
+var ohioEvent2Name = document.querySelector("#ohioEvent2Name");
+var ohioEvent2Date = document.querySelector("#ohioEvent2Date");
+var ohioEvent2Time = document.querySelector("#ohioEvent2Time");
+var ohioEvent3Name = document.querySelector("#ohioEvent3Name");
+var ohioEvent3Date = document.querySelector("#ohioEvent3Date");
+var ohioEvent3Time = document.querySelector("#ohioEvent3Time");
+
+// Retrieve data for Columbus events
+fetch("https://app.ticketmaster.com/discovery/v2/events.json?stateCode=OH&apikey=EAwhjPFguOMlx2wGq5Uw1hujpkkBbPYN")
+
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        // Event 1
+        var ohioEvent1NameValue = data["_embedded"]["events"]["0"]["name"];
+        ohioEvent1Name.innerHTML = ohioEvent1NameValue + ":  ";
+        var ohioEvent1DateValue = data["_embedded"]["events"]["0"]["dates"]["start"]["localDate"];
+        ohioEvent1Date.innerHTML = ohioEvent1DateValue + " at ";
+        var ohioEvent1TimeValue = data["_embedded"]["events"]["0"]["dates"]["start"]["localTime"];
+        ohioEvent1Time.innerHTML = ohioEvent1TimeValue;
+
+        // Event 2
+        var ohioEvent2NameValue = data["_embedded"]["events"]["1"]["name"];
+        ohioEvent2Name.innerHTML = ohioEvent2NameValue + ":  ";
+        var ohioEvent2DateValue = data["_embedded"]["events"]["1"]["dates"]["start"]["localDate"];
+        ohioEvent2Date.innerHTML = ohioEvent2DateValue + " at ";
+        var ohioEvent2TimeValue = data["_embedded"]["events"]["1"]["dates"]["start"]["localTime"];
+        ohioEvent2Time.innerHTML = ohioEvent2TimeValue;
+        
+        // Event 3
+        var ohioEvent3NameValue = data["_embedded"]["events"]["2"]["name"];
+        ohioEvent3Name.innerHTML = ohioEvent3NameValue + ":  ";
+        var ohioEvent3DateValue = data["_embedded"]["events"]["2"]["dates"]["start"]["localDate"];
+        ohioEvent3Date.innerHTML = ohioEvent3DateValue + " at ";
+        var ohioEvent3TimeValue = data["_embedded"]["events"]["2"]["dates"]["start"]["localTime"];
+        ohioEvent3Time.innerHTML = ohioEvent3TimeValue;
     });
-  }
-  
-  function showAttraction(json) {
-    $('#events-panel').hide();
-    $('#attraction-panel').show();
-    
-    $('#attraction-panel').click(function() {
-      getEvents(page);
-    });
-    
-    $('#attraction .list-group-item-heading').first().text(json.name);
-    $('#attraction img').first().attr('src',json.images[0].url);
-    $('#classification').text(json.classifications[0].segment.name + " - " + json.classifications[0].genre.name + " - " + json.classifications[0].subGenre.name);
-  }
-  
-  getEvents(page);
